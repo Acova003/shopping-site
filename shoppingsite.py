@@ -50,10 +50,10 @@ def show_melon(melon_id):
     Show all info about a melon. Also, provide a button to buy that melon.
     """
 
-    melon_id = melons.get_by_id("meli")
-    print(melon_id)
+    melon = melons.get_by_id(melon_id)
+    print(melon)
     return render_template("melon_details.html",
-                           display_melon=melon_id)
+                           display_melon=melon)
 
 
 @app.route("/cart")
